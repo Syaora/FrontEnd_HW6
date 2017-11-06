@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 class FormHandler {
-  constructor (selector) {
+  constructor(selector) {
     if (!selector) {
       throw new Error('No selector provided');
     }
@@ -9,7 +9,8 @@ class FormHandler {
     this.$formElement = $(selector);
     if (this.$formElement.length === 0) {
       throw new Error('Could not find element with selector: ' + selector);
-    }}
+    }
+  }
 
   addSubmitHandler(fn) {
     console.log('Setting submit handler for form');
